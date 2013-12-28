@@ -27,6 +27,8 @@
 		6B3FDA54186E70190049E86E /* FRPPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FDA53186E70190049E86E /* FRPPhotoModel.m */; };
 		6B3FDA57186E70AE0049E86E /* FRPPhotoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FDA56186E70AE0049E86E /* FRPPhotoImporter.m */; };
 		6B3FDA5A186E78A30049E86E /* FRPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FDA59186E78A30049E86E /* FRPCell.m */; };
+		6B3FDA5D186EB12F0049E86E /* FRPFullSizePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FDA5C186EB12F0049E86E /* FRPFullSizePhotoViewController.m */; };
+		6B3FDA60186EB7710049E86E /* FRPPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FDA5F186EB7710049E86E /* FRPPhotoViewController.m */; };
 		B1104D636AE649DCBF908F57 /* libPods-FunctionalReactivePixels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917C2FBE78040E39FAE02A9 /* libPods-FunctionalReactivePixels.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,10 @@
 		6B3FDA56186E70AE0049E86E /* FRPPhotoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoImporter.m; sourceTree = "<group>"; };
 		6B3FDA58186E78A30049E86E /* FRPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPCell.h; sourceTree = "<group>"; };
 		6B3FDA59186E78A30049E86E /* FRPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPCell.m; sourceTree = "<group>"; };
+		6B3FDA5B186EB12F0049E86E /* FRPFullSizePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPFullSizePhotoViewController.h; sourceTree = "<group>"; };
+		6B3FDA5C186EB12F0049E86E /* FRPFullSizePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPFullSizePhotoViewController.m; sourceTree = "<group>"; };
+		6B3FDA5E186EB7710049E86E /* FRPPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPPhotoViewController.h; sourceTree = "<group>"; };
+		6B3FDA5F186EB7710049E86E /* FRPPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoViewController.m; sourceTree = "<group>"; };
 		70FBE4617DAC41CE98A7797B /* Pods-FunctionalReactivePixels.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalReactivePixels.xcconfig"; path = "Pods/Pods-FunctionalReactivePixels.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +142,8 @@
 		6B3FDA1F186E60F00049E86E /* FunctionalReactivePixels */ = {
 			isa = PBXGroup;
 			children = (
+				6B3FDA5B186EB12F0049E86E /* FRPFullSizePhotoViewController.h */,
+				6B3FDA5C186EB12F0049E86E /* FRPFullSizePhotoViewController.m */,
 				6B3FDA55186E70AE0049E86E /* FRPPhotoImporter.h */,
 				6B3FDA56186E70AE0049E86E /* FRPPhotoImporter.m */,
 				6B3FDA52186E70190049E86E /* FRPPhotoModel.h */,
@@ -151,6 +159,8 @@
 				6B3FDA2E186E60F10049E86E /* Images.xcassets */,
 				6B3FDA2B186E60F10049E86E /* FunctionalReactivePixels.xcdatamodeld */,
 				6B3FDA20186E60F00049E86E /* Supporting Files */,
+				6B3FDA5E186EB7710049E86E /* FRPPhotoViewController.h */,
+				6B3FDA5F186EB7710049E86E /* FRPPhotoViewController.m */,
 			);
 			path = FunctionalReactivePixels;
 			sourceTree = "<group>";
@@ -321,7 +331,9 @@
 				6B3FDA51186E6C110049E86E /* FRPGalleryFlowLayout.m in Sources */,
 				6B3FDA5A186E78A30049E86E /* FRPCell.m in Sources */,
 				6B3FDA26186E60F00049E86E /* main.m in Sources */,
+				6B3FDA60186EB7710049E86E /* FRPPhotoViewController.m in Sources */,
 				6B3FDA2A186E60F10049E86E /* FRPAppDelegate.m in Sources */,
+				6B3FDA5D186EB12F0049E86E /* FRPFullSizePhotoViewController.m in Sources */,
 				6B3FDA2D186E60F10049E86E /* FunctionalReactivePixels.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

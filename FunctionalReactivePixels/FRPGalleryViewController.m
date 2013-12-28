@@ -11,8 +11,9 @@
 #import "FRPCell.h"
 #import "FRPGalleryFlowLayout.h"
 #import "FRPPhotoImporter.h"
+#import "FRPFullSizePhotoViewController.h"
 
-@interface FRPGalleryViewController () <UICollectionViewDataSource>
+@interface FRPGalleryViewController () <UICollectionViewDataSource, FRPFullSizePhotoViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray *photos;
 @end
@@ -70,5 +71,19 @@ static NSString *CellIdentifier = @"Cell";
     [cell setPhotoModel:self.photos[indexPath.row]];
 
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    FRPFullSizePhotoViewController *viewController = [[FRPFullSizePhotoViewController alloc] initWithPhotoModels:self.photos currentPhotoIndex:indexPath.item];
+    viewController.delegate = self;
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void)userDidScroll:(FRPFullSizePhotoViewController *)viewController
+       toPhotoAtIndex:(NSInteger)index
+{
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
 }
 @end
