@@ -15,7 +15,7 @@
 #import "FRPPhotoImporter.h"
 #import "FRPFullSizePhotoViewController.h"
 
-@interface FRPGalleryViewController () <FRPFullSizePhotoViewControllerDelegate>
+@interface FRPGalleryViewController () <FRPFullSizePhotoViewControllerDelegate, UICollectionViewDelegate>
 
 @property (nonatomic, strong) NSArray *photos;
 
@@ -52,7 +52,7 @@ static NSString *CellIdentifier = @"Cell";
         [self.collectionView reloadData];
     }];
 
-    [[self rac_signalForSelector:@selector(collectionView:didDeselectItemAtIndexPath:)]
+    [[self rac_signalForSelector:@selector(collectionView:didSelectItemAtIndexPath:) fromProtocol:@protocol(UICollectionViewDelegate)]
      subscribeNext:^(RACTuple *arguments) {
         @strongify(self)
          NSLog(@"in sub for clicking on item index path is %@", arguments.second);
@@ -94,7 +94,7 @@ static NSString *CellIdentifier = @"Cell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"in original cv:dsiaip");
+    NSLog(@"in original cv:dsiaip with index path %@", indexPath);
 }
 
 - (void)userDidScroll:(FRPFullSizePhotoViewController *)viewController toPhotoAtIndex:(NSInteger)index
